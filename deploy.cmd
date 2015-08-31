@@ -102,36 +102,15 @@ IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
 
 :: 3. Install bower packages
 echo Installing Bower
-IF EXIST "%DEPLOYMENT_TARGET%\bower.json" (
-  pushd "%DEPLOYMENT_TARGET%"
-  call :ExecuteCmd !NPM_CMD! install bower
-  IF !ERRORLEVEL! NEQ 0 goto error
-)
 
-:: 3a. Install bower packages
-echo Running bower
-IF EXIST "%DEPLOYMENT_TARGET%\bower.json" (
-  pushd "%DEPLOYMENT_TARGET%"
-  call :ExecuteCmd "!NODE_EXE!" ./node_modules/.bin/bower install
-  IF !ERRORLEVEL! NEQ 0 goto error
-)
-
+call !NPM_CMD! install bower
+call "!NODE_EXE!" ./node_modules/.bin/bower install
   
 :: 4. Run grunt
-echo Installing grunt
-IF EXIST "%DEPLOYMENT_TARGET%\Gruntfile.js" (
-  pushd "%DEPLOYMENT_TARGET%"
-  call :ExecuteCmd !NPM_CMD! install grunt-cli
-  IF !ERRORLEVEL! NEQ 0 goto error
-)
+echo Install/Run Grunt!
 
-:: 4a. Run grunt
-echo Running grunt
-IF EXIST "%DEPLOYMENT_TARGET%\Gruntfile.js" (
-  pushd "%DEPLOYMENT_TARGET%"
-  call :ExecuteCmd "!NODE_EXE!" ./node_modules/.bin/grunt --no-color clean build
-  IF !ERRORLEVEL! NEQ 0 goto error
-)
+call !NPM_CMD! install grunt-cli
+call "!NODE_EXE!" ./node_modules/.bin/grunt --no-color clean build
 
 :: 5. KuduSync
 echo KuduSync!
