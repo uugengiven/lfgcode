@@ -112,7 +112,7 @@ IF EXIST "%DEPLOYMENT_TARGET%\bower.json" (
 echo Running bower
 IF EXIST "%DEPLOYMENT_TARGET%\bower.json" (
   pushd "%DEPLOYMENT_TARGET%"
-  call :ExecuteCmd ./node_modules/.bin/bower install
+  call :ExecuteCmd "!NODE_EXE!" ./node_modules/.bin/bower install
   IF !ERRORLEVEL! NEQ 0 goto error
 )
 
@@ -129,7 +129,7 @@ IF EXIST "%DEPLOYMENT_TARGET%\Gruntfile.js" (
 echo Running grunt
 IF EXIST "%DEPLOYMENT_TARGET%\Gruntfile.js" (
   pushd "%DEPLOYMENT_TARGET%"
-  call :ExecuteCmd ./node_modules/.bin/grunt --no-color clean build
+  call :ExecuteCmd "!NODE_EXE!" ./node_modules/.bin/grunt --no-color clean build
   IF !ERRORLEVEL! NEQ 0 goto error
 )
 
