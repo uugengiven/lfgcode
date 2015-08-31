@@ -101,6 +101,7 @@ IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
 )
 
 :: 3. Install bower packages
+echo Installing Bower
 IF EXIST "%DEPLOYMENT_TARGET%\bower.json" (
   pushd "%DEPLOYMENT_TARGET%"
   call :ExecuteCmd !NPM_CMD! install bower
@@ -108,6 +109,7 @@ IF EXIST "%DEPLOYMENT_TARGET%\bower.json" (
 )
 
 :: 3a. Install bower packages
+echo Running bower
 IF EXIST "%DEPLOYMENT_TARGET%\bower.json" (
   pushd "%DEPLOYMENT_TARGET%"
   call :ExecuteCmd bower install
@@ -116,6 +118,7 @@ IF EXIST "%DEPLOYMENT_TARGET%\bower.json" (
 
   
 :: 4. Run grunt
+echo Installing grunt
 IF EXIST "%DEPLOYMENT_TARGET%\Gruntfile.js" (
   pushd "%DEPLOYMENT_TARGET%"
   call :ExecuteCmd !NPM_CMD! install grunt-cli
@@ -123,6 +126,7 @@ IF EXIST "%DEPLOYMENT_TARGET%\Gruntfile.js" (
 )
 
 :: 4a. Run grunt
+echo Running grunt
 IF EXIST "%DEPLOYMENT_TARGET%\Gruntfile.js" (
   pushd "%DEPLOYMENT_TARGET%"
   call :ExecuteCmd grunt --no-color clean build
@@ -130,6 +134,7 @@ IF EXIST "%DEPLOYMENT_TARGET%\Gruntfile.js" (
 )
 
 :: 5. KuduSync
+echo KuduSync!
 IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
   call :ExecuteCmd "%KUDU_SYNC_CMD%" -v 50 -f "%DEPLOYMENT_SOURCE%\dist" -t "%DEPLOYMENT_TARGET%" -n "%NEXT_MANIFEST_PATH%" -p "%PREVIOUS_MANIFEST_PATH%" -i ".git;.hg;.deployment;deploy.cmd"
   IF !ERRORLEVEL! NEQ 0 goto error
