@@ -1,6 +1,17 @@
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <div class="page-header">
     <h1>{{header}}</h1>
 </div>
 <div class="content">
     <p>Take a quick moment to share our kickstarter info with your friends (Twitter, Facebook or both!). And then take a moment to check out our kickstarter itself and back our community initiatives: classes, new stations and more. Thanks!</p>
 </div>
+
+<div class="fb-share-button" data-href="http://www.lfgpgh.com" data-layout="button_count"></div>

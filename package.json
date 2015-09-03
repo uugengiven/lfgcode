@@ -28,14 +28,7 @@
     "jshint-stylish": "^1.0.0",
     "karma-jasmine": "*",
     "karma-phantomjs-launcher": "*",
-    "time-grunt": "^1.0.0",
-    "package-json": "^0.2.0",
-    "inquirer": "^0.6.0",
-    "gulp-decompress": "^1.1.0",
-    "optipng-bin": "^3.0.2",
-    "bin-wrapper": "^3.0.2",
-    "gifsicle": "^3.0.1",
-    "jpegtran-bin": "^3.0.4"
+    "time-grunt": "^1.0.0"
   },
   "engines": {
     "node": ">=0.10.0"
