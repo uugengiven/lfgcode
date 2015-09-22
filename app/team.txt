@@ -1,0 +1,78 @@
+{"team":[
+    {
+        "image": "edd.jpg", 
+        "name": "-edd", 
+        "position": "Founder", 
+        "info": "-edd is one of the two founders of LFG and believes that building a strong community will make us great. He will be spending much of his time engaging in players and builder, discussing games, what makes something fun and how to make absurd backstories."
+    },    
+    {
+        "image": "john.jpg", 
+        "name": "John Lange", 
+        "position": "Founder", 
+        "info": "John is the other founder of LFG and believes that learning and building is the cornerstone of LFG. Will be designing and leading classes in mod development, retro console building, development best practices and will be helping run game jams."
+    },
+    {
+        "image": "justin.jpg", 
+        "name": "Justin", 
+        "info": "Justin is one of the owners of LFG and also has a lot of points on imgur as crystalhelix. You should totally upvote him and ask him for help with sweet animations when video editing.", 
+        "game": "Payday 2, Payday 2"
+    },
+    {
+        "image": "brayton.jpg", 
+        "name": "Brayton", 
+        "info": "Brayton is one of the owners of LFG and is looking forward to the next Game Jam where he will pull in an electronic drum kit and a guitar and provide music for any team that wants it.",
+        "game": "Rocksmith, Payday 2, Steam Sales, Awesomenauts, Skyrim, D&D, Lifeboats"
+    },
+    {
+        "image": "brad.jpg", 
+        "name": "Brad",
+        "info": "Brad is an owner of LFG and has a deep knowledge of servers, systems and Xur. He will be running console tournaments for LFG and possibly leading late night raids in Destiny.",
+        "game": "Destiny"
+    },
+    {
+        "image": "jean.jpg", 
+        "name": "Jean", 
+        "info": "Jean is a champion of process, code testing and being happy. She is also great at organizing, interviewing people and making sure all info is where it needs to be (on a wiki). Jean will be integral in making our development events work and have a lasting impact.", 
+        "game": "Titan Quest, A Tale in the Desert (seriously, don't mention this game, we finally broke the addiction), Concept, Set, Bohnanza, Hanabi, King of Tokyo, Dixit"
+    },
+    {
+        "image": "dan.jpg", 
+        "name": "Dan", 
+        "info": "Dan is like Guido, will help for an absurd amount of time and make sure everything gets done.", 
+        "game": "Dropzone Commander, Witcher, Skyrim, D&D, Warhammer, 40K, Rogue Trader"
+    },
+    {
+        "image": "emily.jpg", 
+        "name": "Emily", 
+        "info": "Emily has taken all of the pictures that you see on this page. She also loves Mario 64.", 
+        "game": "Snake Oil, Mario 64, anything that involves getting up and dancing while playing"
+    },
+    {
+        "image": "drew.jpg", 
+        "name": "Drew", 
+        "info": "Drew will come in and do your network working, only to have it all changed by Matt.",
+        "game": "Battlefield, WoW, Heroes of the Storm, League of Legends, Artemis"
+    },
+    {
+        "image": "matt.jpg", 
+        "name": "Matt", 
+        "info": "Matt will come in and do your network working, only to have it all changed by Drew."
+    },    {
+        "image": "zack.jpg", 
+        "name": "Zack",
+        "info": "Zack has some of the best costumes and also some of the most love for the Elder Scrolls. If he isn't playing a game, talk to him about making cheese, living in China or tasting beer.",
+        "game": "Final Fantasy 7, WoW, Bailey's, Elder Scrolls, XCom, Wasteland, Fallout, Turn Based RPGs"
+    },
+    {
+        "image": "guido.jpg", 
+        "name": "Guido", 
+        "info": "Guido is like Dan, will help for an absurd amount of time and make sure everything gets done.",
+        "game": "Dropzone Commander, Warhammer, Fallout, 40K, Rogue Trader"
+    },
+    {
+        "image": "nora.jpg", 
+        "name": "Nora",
+        "info": "Don't trust Nora in any board game. She is definitely the thief and trying to back stab you.",
+        "game": "Elder Scrolls, Munchkin, Quelf, any game where she can play a thief"
+    }
+]}

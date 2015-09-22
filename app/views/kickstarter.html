@@ -7,11 +7,45 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+
+
+
 <div class="page-header">
     <h1>{{header}}</h1>
 </div>
-<div class="content">
-    <p>Take a quick moment to share our kickstarter info with your friends (Twitter, Facebook or both!). And then take a moment to check out our kickstarter itself and back our community initiatives: classes, new stations and more. Thanks!</p>
+<div class="row">
+<div class="col-md-5">
+<iframe frameborder="0" height="420" scrolling="no" src="https://www.kickstarter.com/projects/1689659549/looking-for-group-gaming-community-space/widget/card.html?v=2" width="220"></iframe>
 </div>
 
-<div class="fb-share-button" data-href="http://www.lfgpgh.com" data-layout="button_count"></div>
+<div class="content col-md-7">
+    <p>Take a quick moment to share our kickstarter info with your friends (Twitter, Facebook or both!). And then take a moment to check out our kickstarter itself and back our community initiatives: classes, new stations and more. Thanks!</p>
+    
+    <div style="padding-top: 10px">
+    <div class="fb-share-button" data-href="http://kck.st/1gI1DOU" data-layout="button_count"></div>
+    </div>
+    <div style="padding-top: 10px"><link rel="canonical"
+  href="http://kck.st/1gI1DOU"><a class="twitter-share-button" rel="http://kck.st/1gI1DOU"
+  href="https://twitter.com/intent/tweet?text=Help build a local gaming community by pledging on Kickstarter!"></a></div>
+
+</div>
+
+</div>
+
+

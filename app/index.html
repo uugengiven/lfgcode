@@ -46,6 +46,8 @@
               <li ng-class="{ active: isActive('/gaming')}"><a ng-href="#/gaming">Gaming</a></li>
               <li ng-class="{ active: isActive('/community')}"><a ng-href="#/community">Community</a></li>
               <li ng-class="{ active: isActive('/cowork')}"><a ng-href="#/cowork">Cowork</a></li>
+              <li ng-class="{ active: isActive('/about')}"><a ng-href="#/about">About Us</a></li>
+              <li ng-class="{ active: isActive('/kickstarter')}" class="btn-info"><a ng-href="#/kickstarter"><span class="glyphicon glyphicon-star"></span> <b>Kickstarter</b></a></li>
             </ul>
           </div>
         </div>
@@ -77,13 +79,14 @@
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/handlebars/handlebars.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -96,6 +99,7 @@
         <script src="scripts/controllers/community.js"></script>
         <script src="scripts/controllers/kickstarter.js"></script>
         <script src="scripts/controllers/header.js"></script>
+        <script src="scripts/controllers/us.js"></script>
         <!-- endbuild -->
 </body>
 </html>
