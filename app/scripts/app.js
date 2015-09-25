@@ -34,11 +34,6 @@ angular
         controller: 'CoworkCtrl',
         controllerAs: 'cowork'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
     .when('/community', {
         templateUrl: 'views/community.html',
         controller: 'CommunityCtrl',
