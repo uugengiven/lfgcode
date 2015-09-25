@@ -3,13 +3,13 @@
         "image": "edd.jpg", 
         "name": "-edd", 
         "position": "Founder", 
-        "info": "-edd is one of the two founders of LFG and believes that building a strong community will make us great. He will be spending much of his time engaging in players and builder, discussing games, what makes something fun and how to make absurd backstories."
+        "info": "-edd is one of the two founders of LFG and believes that building a strong community will make us great. He will be spending much of his time engaging with players and builders, discussing games, what makes something fun, and how to make absurd backstories."
     },    
     {
         "image": "john.jpg", 
         "name": "John Lange", 
         "position": "Founder", 
-        "info": "John is the other founder of LFG and believes that learning and building is the cornerstone of LFG. Will be designing and leading classes in mod development, retro console building, development best practices and will be helping run game jams."
+        "info": "John is the other founder of LFG and believes that learning and building is the cornerstone of LFG. He will be designing and leading classes in mod development, retro console building, development best practices, and will be helping run game jams."
     },
     {
         "image": "justin.jpg", 
@@ -50,13 +50,13 @@
     {
         "image": "drew.jpg", 
         "name": "Drew", 
-        "info": "Drew will come in and do your network working, only to have it all changed by Matt.",
+        "info": "Drew will come in and do your network work, only to have it all changed by Matt.",
         "game": "Battlefield, WoW, Heroes of the Storm, League of Legends, Artemis"
     },
     {
         "image": "matt.jpg", 
         "name": "Matt", 
-        "info": "Matt will come in and do your network working, only to have it all changed by Drew."
+        "info": "Matt will come in and do your network work, only to have it all changed by Drew."
     },    {
         "image": "zack.jpg", 
         "name": "Zack",
