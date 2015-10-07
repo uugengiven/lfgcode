@@ -14,55 +14,177 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/ui.css">
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- CSS Header and Footer -->
+    <link rel="stylesheet" href="assets/css/headers/header-default.css">
+    <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="assets/plugins/animate.css">
+    <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="assets/plugins/layer-slider/layerslider/css/layerslider.css">
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+    
     <!-- endbuild -->
   </head>
   <body ng-app="lfgApp">
+  <div class="wrapper">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
+    <!--=== Header ===-->
     <div class="header">
-      <div class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="HeaderCtrl">
         <div class="container">
-          <div class="navbar-header">
+            <!-- Logo -->
+            <a class="logo" href="index.html">
+                <img src="images/logo.png" height=100 alt="Logo">
+            </a>
+            <!-- End Logo -->
 
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
+            <!-- Topbar -->
+            <div class="topbar">
+                <ul class="loginbar pull-right">
+                    <li><a href="http://wiki.lfgpgh.com">Wiki</a></li>
+                    <li class="topbar-devider"></li>
+                    <li><a href="http://blog.lfgpgh.com">Blog</a></li>
+                </ul>
+            </div>
+            <!-- End Topbar -->
+
+            <!-- Toggle get grouped for better mobile display -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="fa fa-bars"></span>
             </button>
+            <!-- End Toggle -->
+        </div><!--/end container-->
 
-            <a class="navbar-brand navlogo" href="#/"><img src="images/smlogo.png" class="img-responsive" alt="logo"></a>
-          </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <!-- Menu -->
+                      <li ng-class="{ active: isActive('/')}"><a href="#/">Home</a></li>
+                      <li ng-class="{ active: isActive('/gaming')}"><a ng-href="#/gaming">Gaming</a></li>
+                      <li ng-class="{ active: isActive('/community')}"><a ng-href="#/community">Community</a></li>
+                      <li ng-class="{ active: isActive('/cowork')}"><a ng-href="#/cowork">Cowork</a></li>
+                      <li ng-class="{ active: isActive('/about')}"><a ng-href="#/about">About Us</a></li>
+                      <li ng-class="{ active: isActive('/kickstarter')}" class="btn-info"><a ng-href="#/kickstarter"><span class="glyphicon glyphicon-star"></span> <b>Kickstarter</b></a></li>
 
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+                    <!-- End Menu -->
 
-            <ul class="nav navbar-nav">
-              <li ng-class="{ active: isActive('/')}"><a href="#/">Home</a></li>
-              <li ng-class="{ active: isActive('/gaming')}"><a ng-href="#/gaming">Gaming</a></li>
-              <li ng-class="{ active: isActive('/community')}"><a ng-href="#/community">Community</a></li>
-              <li ng-class="{ active: isActive('/cowork')}"><a ng-href="#/cowork">Cowork</a></li>
-              <li ng-class="{ active: isActive('/about')}"><a ng-href="#/about">About Us</a></li>
-              <li ng-class="{ active: isActive('/kickstarter')}" class="btn-info"><a ng-href="#/kickstarter"><span class="glyphicon glyphicon-star"></span> <b>Kickstarter</b></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+                </ul>
+            </div><!--/end container-->
+        </div><!--/navbar-collapse-->
     </div>
+    <!--=== End Header ===-->
 
-    <div class="container">
+   
+    
     <div ng-view=""></div>
-    </div>
+    
+    <!--=== Footer Version 1 ===-->
+    <div class="footer-v1">
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <!-- About -->
+                    <div class="col-md-3 md-margin-bottom-40">
+                        <a href="index.html"><img id="logo-footer" class="footer-logo" src="images/smlogo.png" alt=""></a>
+                        <p>Looking for Group is Pittsburgh's foremost gaming community space. We would love to hear from you.</p>
+                    </div><!--/col-md-3-->
+                    <!-- End About -->
 
-    <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the LFG (and Yeoman) team</p>
-      </div>
+                    <!-- Latest -->
+                    <div class="col-md-3 md-margin-bottom-40">
+                        <div class="posts">
+                            <div class="headline"><h2>Latest Posts</h2></div>
+                            <ul class="list-unstyled latest-list">
+                                <li>
+                                    <a href="#">Incredible content</a>
+                                    <small>May 8, 2014</small>
+                                </li>
+                                <li>
+                                    <a href="#">Best shoots</a>
+                                    <small>June 23, 2014</small>
+                                </li>
+                                <li>
+                                    <a href="#">New Terms and Conditions</a>
+                                    <small>September 15, 2014</small>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!--/col-md-3-->
+                    <!-- End Latest -->
+
+                    <!-- Link List -->
+                    <div class="col-md-3 md-margin-bottom-40">
+                        <div class="headline"><h2>Useful Links</h2></div>
+                        <ul class="list-unstyled link-list">
+                            <li><a href="#">Blog</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="#">Gaming Info</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="#">Cowork Info</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="#">Community Guidelines</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="mailto:lange.john.m@gmail.com">Contact us</a><i class="fa fa-angle-right"></i></li>
+                        </ul>
+                    </div><!--/col-md-3-->
+                    <!-- End Link List -->
+
+                    <!-- Address -->
+                    <div class="col-md-3 map-img md-margin-bottom-40">
+                        <div class="headline"><h2>Contact Us</h2></div>
+                        <address class="md-margin-bottom-40">
+                            924 Brookline Blvd <br />
+                            Pittsburgh, PA 15226 <br />
+                            Phone: (774) 482-1264 <br />
+                            Email: <a href="mailto:lange.john.m@gmail.com" class="">lange.john.m@gmail.com</a>
+                        </address>
+                    </div><!--/col-md-3-->
+                    <!-- End Address -->
+                </div>
+            </div>
+        </div><!--/footer-->
+
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>
+                            2015 &copy; All Rights Reserved.
+                        </p>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="col-md-6">
+                        <ul class="footer-socials list-inline">
+                            <li>
+                                <a href="https://www.facebook.com/lfgpgh" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.twitter.com/lfgpgh" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End Social Links -->
+                </div>
+            </div>
+        </div><!--/copyright-->
     </div>
+    <!--=== End Footer Version 1 ===-->
+
+    
+    </div><!--/wrapper-->
 
 
      <script>
@@ -91,6 +213,25 @@
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <!-- JS Implementing Plugins -->
+        <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+        <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+        <script type="text/javascript" src="assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
+        <script type="text/javascript" src="assets/plugins/layer-slider/layerslider/js/greensock.js"></script>
+        <script type="text/javascript" src="assets/plugins/layer-slider/layerslider/js/layerslider.transitions.js"></script>
+        <script type="text/javascript" src="assets/plugins/layer-slider/layerslider/js/layerslider.kreaturamedia.jquery.js"></script>
+        <!-- JS Customization -->
+        <script type="text/javascript" src="assets/js/custom.js"></script>
+        <!-- JS Page Level -->
+        <script type="text/javascript" src="assets/js/app.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/layer-slider.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/owl-carousel.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/owl-recent-works.js"></script>        
+        <script type="text/javascript">
+            jQuery(document).ready(function() {
+                App.init();
+            });
+        </script>
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
