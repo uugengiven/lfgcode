@@ -84,6 +84,14 @@
 
     <div class="container content height-500">    
 
+    <!-- Recent Works -->
+    <div class="headline"><h2>Recent News</h2></div>
+    <div class="row margin-bottom-20" id="newsList">
+
+    </div>
+    <!-- End Recent Works -->
+    <div id="newsBlock"></div>
+    
         <div class="row">
             <div class="span5 pull-right" style="padding-left: 10px">
             <iframe frameborder="0" height="420" scrolling="no" src="https://www.kickstarter.com/projects/1689659549/looking-for-group-gaming-community-space/widget/card.html?v=2" width="220"></iframe>
@@ -152,6 +160,36 @@
 
     </div>
 
+            <script id="news-template" type="text/x-handlebars-template">
+            {{#each posts}}
+                <div class="col-md-3 col-sm-6">
+                    <div class="thumbnails thumbnail-style thumbnail-kenburn">
+                        <div class="thumbnail-img">
+                            <div class="overflow-hidden">
+                                <img class="img-responsive" src="{{thumbnail_images.medium.url}}" alt="">
+                            </div>
+                            <a class="btn-more hover-effect" href="{{url}}">read more +</a>
+                        </div>
+                        <div class="caption">
+                            <h3><a class="hover-effect" href="#">{{title}}</a></h3>
+                            <p>{{custom_fields.shortDescription}}</p>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </script>
+        
+        <script>
+            var source = $("#news-template").html();
+            var template = Handlebars.compile(source);
+            var jqhxr = $.getJSON("http://blog.lfgpgh.com/?json=get_category_posts&slug=frontpage&count=3", null)
+                .done(function(data){
+                    var html = template(data);
+                    $("#newsList").html(html);
+                });
+            
+        </script>
+    
     <script>
                 LayerSlider.initLayerSlider();
                 OwlCarousel.initOwlCarousel();
