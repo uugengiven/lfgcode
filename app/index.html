@@ -106,20 +106,7 @@
                     <div class="col-md-3 md-margin-bottom-40">
                         <div class="posts">
                             <div class="headline"><h2>Latest Posts</h2></div>
-                            <ul class="list-unstyled latest-list">
-                                <li>
-                                    <a href="#">Incredible content</a>
-                                    <small>May 8, 2014</small>
-                                </li>
-                                <li>
-                                    <a href="#">Best shoots</a>
-                                    <small>June 23, 2014</small>
-                                </li>
-                                <li>
-                                    <a href="#">New Terms and Conditions</a>
-                                    <small>September 15, 2014</small>
-                                </li>
-                            </ul>
+                            <div id="newslinksList"></div>
                         </div>
                     </div><!--/col-md-3-->
                     <!-- End Latest -->
@@ -240,6 +227,30 @@
         <script src="scripts/controllers/community.js"></script>
         <script src="scripts/controllers/kickstarter.js"></script>
         <script src="scripts/controllers/header.js"></script>
+        <script src="scripts/controllers/map.js"></script>
         <!-- endbuild -->
+        
+        <script id="newslinks-template" type="text/x-handlebars-template">
+            <ul class="list-unstyled latest-list">
+                {{#each posts}}
+                    <li>
+                        <a href="{{url}}" target="_blank">{{title}}</a>
+                        <small>{{date}}</small>
+                    </li>
+                {{/each}}
+            </ul>
+        </script>
+
+        <script>
+            var source1 = $("#newslinks-template").html();
+            var template1 = Handlebars.compile(source1);
+            var jqhxr = $.getJSON("http://blog.lfgpgh.com/?json=true&count=4", null)
+                .done(function(data){
+                    var html = template1(data);
+                    $("#newslinksList").html(html);
+                });
+            
+        </script>
+        
 </body>
 </html>

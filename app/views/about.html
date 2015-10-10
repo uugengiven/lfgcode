@@ -1,12 +1,76 @@
 
-    <div class="container content height-500">  
-<div class="page-header">
-    <h1>The LFG Team</h1>
-</div>
+    <div class="page-header">
+        <h1>The LFG Team</h1>
+    </div>
 
-<div id="teamList"></div>
-</div>
+    <div id="teamList"></div>
 
+    <script id="team-template2" type="text/x-handlebars-template">
+        <!--=== Team v2 ===-->
+        <div class="bg-color-white">
+            <div class="container content-md">
+                <div class="row">
+                    <!-- Team v2 -->
+                    {{#each team}}
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-v2 no-margin-bottom">
+                            <img class="img-responsive img-circle" style="padding-bottom: 10px" src="faces/{{image}}" alt="{{name}}">
+                            <div class="inner-team">
+                                <h3>{{name}}</h3>
+                                <small class="color-green">{{title}}</small>
+                                <p>{{info}}</p>
+                                <hr>
+                                <ul class="list-inline team-social">
+                                {{#if facebook}}
+                                    <li>
+                                        <a data-placement="top" data-toggle="tooltip" class="fb tooltips" data-original-title="Facebook" href="{{facebook}}">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                {{/if}}
+                                {{#if twitter}}
+                                    <li>
+                                        <a data-placement="top" data-toggle="tooltip" class="tw tooltips" data-original-title="Twitter" href="{{twitter}}">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                {{/if}}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    {{#every @index 4}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="container content-md">
+                    {{/every}}
+                    {{/each}}
+                    <!-- End Team v2 -->
+
+                </div>
+            </div>
+        </div>
+        <!--=== End Team v2 ===-->
+    </script>
+
+    <script>
+        Handlebars.registerHelper('every', function (index, operator, options) {
+            
+            if (arguments.length < 3) {
+                throw new Error("Handlerbars Helper 'every' needs 2 parameters");
+            }
+            
+          
+            if (((index+1) % operator) == 0) {
+                return options.fn(this);
+            } else {
+                return options.inverse(this);
+            }
+        });
+    </script>    
+    
+    
         <script id="team-template1" type="text/x-handlebars-template">
             <div class="row">
             {{#each team}}
@@ -41,7 +105,7 @@
         </script>
         
         <script>
-            var source = $("#team-template1").html();
+            var source = $("#team-template2").html();
             var template = Handlebars.compile(source);
             var jqhxr = $.getJSON("team.txt", null)
                 .done(function(data){
