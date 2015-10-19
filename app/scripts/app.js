@@ -49,7 +49,12 @@ angular
         controller: 'MapCtrl',
         controllerAs: 'map'
       })
-      .when('/kickstarter', {
+    .when('/events', {
+        templateUrl: 'views/events.html',
+        controller: 'EventsCtrl',
+        controllerAs: 'events'
+      })
+    .when('/kickstarter', {
         templateUrl: 'views/kickstarter.html',
         controller: 'KickstarterCtrl',
         controllerAs: 'kickstarter'
