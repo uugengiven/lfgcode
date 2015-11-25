@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <!-- endbower -->
     <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
+
+    
     <!-- CSS Global Compulsory -->
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -31,7 +32,7 @@
     <!-- CSS Customization -->
     <link rel="stylesheet" href="assets/css/custom.css">
     
-    <!-- endbuild -->
+
   </head>
   <body ng-app="lfgApp">
   <div class="wrapper">
@@ -75,7 +76,7 @@
                       <li ng-class="{ active: isActive('/gaming')}"><a ng-href="#/gaming">Gaming</a></li>
                       <li ng-class="{ active: isActive('/community')}"><a ng-href="#/community">Community</a></li>
                       <li ng-class="{ active: isActive('/cowork')}"><a ng-href="#/cowork">Cowork</a></li>
-                      <li ng-class="{ active: isActive('/map')}"><a ng-href="#/about">Map</a></li>
+                      <li ng-class="{ active: isActive('/map')}"><a ng-href="#/map">Map</a></li>
                       <li ng-class="{ active: isActive('/about')}"><a ng-href="#/about">About Us</a></li>
                       <li ng-class="{ active: isActive('/kickstarter')}" class="btn-info"><a ng-href="#/kickstarter"><span class="glyphicon glyphicon-star"></span> <b>Kickstarter</b></a></li>
 
@@ -200,7 +201,7 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+
         <!-- JS Implementing Plugins -->
         <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
         <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
@@ -215,11 +216,7 @@
         <script type="text/javascript" src="assets/js/plugins/layer-slider.js"></script>
         <script type="text/javascript" src="assets/js/plugins/owl-carousel.js"></script>
         <script type="text/javascript" src="assets/js/plugins/owl-recent-works.js"></script>        
-        <script type="text/javascript">
-            jQuery(document).ready(function() {
-                App.init();
-            });
-        </script>
+
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
@@ -230,8 +227,13 @@
         <script src="scripts/controllers/header.js"></script>
         <script src="scripts/controllers/map.js"></script>
         <script src="scripts/controllers/events.js"></script>
-        <!-- endbuild -->
+
         
+        <script type="text/javascript">
+            jQuery(document).ready(function() {
+                App.init();
+            });
+        </script>        
         <script id="newslinks-template" type="text/x-handlebars-template">
             <ul class="list-unstyled latest-list">
                 {{#each posts}}
